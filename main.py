@@ -6,6 +6,15 @@ def encode(pass_wd):
         pass_w_new += str(num)
     return pass_w_new
 
+def decode(pass_w_new):
+    pass_w = list(pass_w_new)
+    pass_wd = ''
+    for num in pass_w:
+        num = int(num) - 3
+        pass_wd += str(num)
+    return pass_wd
+
+
 def main():
     program = True
     pass_wd = ""
@@ -23,7 +32,7 @@ def main():
            print("Your password has been encoded and stored!")
 
         elif option == 2:
-            print(f"The encoded password is {pass_w_new}, and the original password is {pass_wd}.")
+            print(f"The encoded password is {pass_w_new}, and the original password is {decode(pass_w_new)}.")
 
         elif option == 3:
             program = False
