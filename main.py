@@ -1,3 +1,4 @@
+#Todd McMillan
 def encode(pass_wd):
     pass_w = list(pass_wd)
     pass_w_new = ""
@@ -6,13 +7,6 @@ def encode(pass_wd):
         pass_w_new += str(num)
     return pass_w_new
 
-def decode(pass_w_new):
-    pass_w = list(pass_w_new)
-    pass_wd = ''
-    for num in pass_w:
-        num = int(num) - 3
-        pass_wd += str(num)
-    return pass_wd
 
 
 def main():
